@@ -10,7 +10,7 @@ export default defineConfig({
   ],
 
   build: {
-    outDir: path.resolve(__dirname, '/ui'), // 👈 Output to top-level 'dist'
+    outDir: path.resolve(__dirname, './ui'), // 👈 Output to top-level 'dist'
     emptyOutDir: true, // Clean output dir before build
     rollupOptions: {
       input: path.resolve(__dirname, 'index.html') // Entry point

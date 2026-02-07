@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="et" x-data="projekt" x-init="init()">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kassid ja Koerad</title>
+  <script type="module" crossorigin src="/assets/index-6764e7d0.js"></script>
+  <link rel="stylesheet" href="/assets/index-6e711cd5.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-zinc-800 to-zinc-900 text-white space-x-9 space-y-9 text-balance">
+
+  <div class="container mx-auto py-12 px-6">
+
+  
+    <h1 class="text-4xl font-bold text-center mb-12">
+      🐾 Kassid & Koerad
+    </h1>
+
+ 
+    <div class="grid md:grid-cols-2 gap-10">
+
+     
+      <div class="bg-zinc-800 rounded-2xl shadow-xl p-6 transition hover:scale-105 duration-300 border-2 border-fuchsia-300">
+
+        <h2 class="text-2xl font-semibold mb-4 text-center">Kass</h2>
+
+        <template x-if="catImage">
+          <div class="space-y-4">
+            <img :src="catImage.url" alt="Kass"
+              class="w-full h-101 object-cover rounded-xl shadow-lg">
+
+            <div class="text-sm space-y-1 text-zinc-300">
+              <p><strong>ID:</strong> <span x-text="catImage.id"></span></p>
+              <p><strong>Laius:</strong> <span x-text="catImage.width"></span> px</p>
+              <p><strong>Kõrgus:</strong> <span x-text="catImage.height"></span> px</p>
+            </div>
+          </div>
+        </template>
+
+        <button
+          @click="getRandomCat()"
+          class="mt-6 w-full bg-fuchsia-600 hover:bg-fuchsia-300 py-2 rounded-lg font-medium transition">
+          Uus Kass
+        </button>
+
+      </div>
+
+      
+      <div class="bg-zinc-800 rounded-2xl shadow-xl p-6 transition hover:scale-105 duration-300 border-2 border-blue-400">
+
+        <h2 class="text-2xl font-semibold mb-4 text-center">Koer</h2>
+
+        <template x-if="dogImage">
+          <div class="space-y-8">
+            <img :src="dogImage.url" alt="Koer"
+              class="w-full h-101 object-cover rounded-xl shadow-lg">
+
+            <div class="text-sm space-y-1 text-zinc-300">
+              <p><strong>ID:</strong> <span x-text="dogImage.id"></span></p>
+              <p><strong>Laius:</strong> <span x-text="dogImage.width"></span> px</p>
+              <p><strong>Kõrgus:</strong> <span x-text="dogImage.height"></span> px</p>
+            </div>
+          </div>
+        </template>
+
+        <button
+          @click="getRandomDog()"
+          class="mt-6 w-full bg-blue-600 hover:bg-blue-300 py-2 rounded-lg font-medium transition">
+          Uus Koer
+        </button>
+
+      </div>
+
+      
+
+    </div>
+    
+       <div class=" justify-center max-w-screen items-center text-center rounded-2xl py-2 transition hover:scale-105 duration-300">
+          <button
+            @click="getAll()"
+            class="mt-6 w-auto bg-green-600 hover:bg-green-500 py-3 p-9 rounded-lg font-medium transition">
+            Mõlemad
+          </button>
+
+        </div>
+   
+   
+   
+
+  </div>
+
+  <!-- JS -->
+  
+
+  <!-- CSS -->
+  
+
+</body>
+</html>
