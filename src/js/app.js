@@ -30,7 +30,7 @@ Alpine.data('projekt', () => ({
             const response = await fetch(this.apiUrlDog)
             const data = await response.json()
 
-            this.Print(data, 'json')
+           // this.Print(data, 'json')
 
             
             this.dogImage = data[0]
@@ -48,7 +48,7 @@ Alpine.data('projekt', () => ({
             const response = await fetch(this.apiUrlCat)
             const data = await response.json()
 
-            this.Print(data, 'json')
+           // this.Print(data, 'json')
 
             
             this.catImage = data[0]
